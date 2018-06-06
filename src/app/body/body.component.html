@@ -1,0 +1,25 @@
+<h1>Body</h1>
+<!--possibilite avec ngIf
+  <div *ngIf=serviceService.menuChoice>
+  <h2>{{ serviceService.menuChoice }}</h2>
+</div>-->
+
+<div [ngSwitch]="serviceService.menuChoice">
+    <div *ngSwitchCase="'Voyage'">
+      <h1 >VoyageSwitch</h1>
+    </div>
+    <div *ngSwitchCase="'Loisirs'">
+      <h1>LoisirsSwitch</h1>
+    </div>
+    <div *ngSwitchCase="'Personne'">
+        <h1>PersonneSwitch</h1>
+    </div>
+    <div *ngSwitchCase="'1'">
+        <h1>1Switch</h1>
+    </div>
+    <div *ngSwitchCase="'2'">
+        <h1>2Switch</h1>
+    </div>
+    
+    <div *ngSwitchDefault="">Merci de faire  un choix dans le menu</div>
+</div>
